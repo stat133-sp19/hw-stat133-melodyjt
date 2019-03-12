@@ -1,0 +1,80 @@
+---
+title: "warm01-melody-tran"
+author: "Melody"
+date: "February 10, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+###**Star Wars**
+
+![**Freya Fenris**](https://vignette.wikia.nocookie.net/starwars/images/4/43/SWResistance-FreyaFenris.jpg/revision/latest?cb=20180914204850)
+
+A famous quote by Freya Fenris
+
+> "_We'll have to bring her in manually. Follow my signal._"
+
+|Description |Value |
+|-------|------|
+|Species |Human |
+|Gender |Female |
+|Eye Color |Blue |
+|Skin Color |Light |
+
+###**Cooking Recipe**
+
+![**Melting Potatoes**](https://farm1.staticflickr.com/812/27201919058_534eb7d0b7_z.jpg)
+
+_Ingredients_  
+* 4 tablespoons unsalted butter, melted  
+* 2 teaspoons chopped fresh thyme or rosemary leaves  
+* 1 teaspoon kosher salt
+* 1/2 teaspoon freshly ground black pepper  
+* 2 pounds yukon gold potatoes, peeled, cut into 1-inch slices  
+* 1 cup chicken or vegetable stock or low-sodium broth  
+* 3 to 4 garlic cloves, peeled and smashed
+
+_Tools_  
+* large bowl  
+* 9x13 metal baking pan  
+* thin spatula
+
+_Steps_  
+1. Heat oven to **500 degrees F** (_450 or 475 works as well_)  
+2. Place melted butter in the bottom of the large bowl  
+3. Stir in herbs, salt, and pepper (_none of these mandatory, place in what you want to season your potatoes_)  
+4. Add potato slices and mix (_coat evenly_)  
+5. Spread potato slices (_including everything in the bowl_) in the metal baking pan  
+6. Roast potatoes for **15 minutes**  
+7. Use the thin spatula to loosen potatoes and turn them over  
+8. Roast for **15 _more_ minutes**  
+9. Pour stock or broth into the pan and add the garlic cloves  
+10. Roast for **15 minutes _more_** (_or until potatoes are fully tender_)  
+11. Remove from oven and transfer into a serving platter (_including any remaining liquid in the pan_)  
+
+_Extra Notes_  
+* can be made any season  
+* floury/mealy potatoes (_such as Russets_) also work  
+* a little butter with olive works as a substitute for all 4 tablespoons of butter  
+
+###**Euclidean Distance**  
+
+####**Definition**
+***  
+The **Euclidean distance** between points **p** and **q** is the length of the line segment connecting them ($\overline{\textbf{pq}}$).
+
+In Cartesian coordinates, if **p** =  ($\sf{p_{1}}, \sf{p_{2}},..., \sf{p_{n}}$) and **q** = ($\sf{q_{1}}, \sf{q_{2}},..., \sf{q_{n}}$) are two points in Euclidean n-space, then the distance (d) from **p** to **q**, or from **q** to **p** is given by the Pythagoran formula:
+
+$\mathit{d}$$(\textbf{p, q})$ = $\mathit{d}$$(\textbf{q, p})$ =
+$\sqrt{(q_{1} - p_{1})^2 + (q_{2} - p_{2})^2+ ... + (q_{n}-p_{n})^2)}$ =
+
+$\sqrt{\sum_{i=1}^n  (q_i - p_i)^2}$.
+
+The position of a point in a Euclidean _n_-space is a Euclidean vector. So, **p** and **q** may be represented as Euclidean vectors, sarting from the origin of the space (initial point) with their tips (terminal points) ending at the two points. The Euclidean norm, or **Euclidean length**, or **magnitude** of a vector measures the length of the vector:<br>
+$\|\textbf p\| = \sqrt{p_{1}^2 + p_{2}^2+ ... + p_{n}^2} = \sqrt{\textbf{p.p}}$, <br>
+where the last expression involves the dot product.
+
+
+
