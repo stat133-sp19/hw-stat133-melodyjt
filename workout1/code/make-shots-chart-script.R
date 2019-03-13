@@ -84,7 +84,7 @@ facet_shot_chart <- ggplot(data = shots) +
   ylim(-50, 420) +
   ggtitle('Shot Charts: GSW (2016 season)') +
   theme_minimal()+
-  facet_grid(~ name)
+  facet_wrap(~ name)
 facet_shot_chart
 
 png('../images/gsw-shot-charts.png', width=8,height=7, units="in", res = 72)
