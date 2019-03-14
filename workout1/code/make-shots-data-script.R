@@ -25,11 +25,15 @@ destination1 <- "../data/stephen-curry.csv"
 download.file(url5, destination5)
 
 #3) Data Preparation
-iguodala <- read.csv("../data/andre-iguodala.csv", stringsAsFactors = FALSE)
-green <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE)
-durant <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE)
-thompson <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE)
-curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
+datatypes <- c("team_name" = "character", "game_date" = "character", "season" = "integer", "period" = "integer",
+               "minutes_remaining" = "integer", "seconds_remaining" = "integer", "shot_made_flag" = "character",
+               "action_type" = "factor", "shot_type" = "factor", "shot_distance" = "integer", "opponent" = "character",
+               "x" = "integer", "y" = "integer")
+iguodala <- read.csv("../data/andre-iguodala.csv", stringsAsFactors = FALSE, colClasses = datatypes)
+green <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE, colClasses = datatypes)
+durant <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE, colClasses = datatypes)
+thompson <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE, colClasses = datatypes)
+curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE, colClasses = datatypes)
 
 iguodala$name <- "Andre Iguodala"
 green$name <- "Draymond Green"
