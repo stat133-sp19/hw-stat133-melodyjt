@@ -55,7 +55,7 @@ klay_shot_chart <- ggplot(data = klay) +
   ggtitle('Shot Chart: Klay Thompson (2016 season)') +
   theme_minimal()
 
-stephen_shot_chart <- ggplot(data = stepehn) +
+stephen_shot_chart <- ggplot(data = stephen) +
   annotation_custom(court_image, -250, 250, -50, 420) +
   geom_point(aes(x = x, y = y, color = shot_made_flag)) +
   ylim(-50, 420) +
@@ -94,6 +94,6 @@ pdf('../images/gsw-shot-carts.pdf', width = 8, height = 7)
 gsw_shot_charts
 dev.off()
 
-png('../images/gsw-shot-charts.png', width = 8, height = 7, units = "in", res = 72)
+png('../images/gsw-shot-charts.png', width = 8, height = 7, units = "in", res = 500)
 gsw_shot_charts
 dev.off()
