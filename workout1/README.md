@@ -1,1 +1,2 @@
-This assignment involves visualizing shot data of specific NBA players from the Golden State Warriors along with other summaries and visualizations. A report will also be included.
+This assignment involves working with large data and complex file structures. It also involves working with Github and understanding how to upload files to a repository with git commands. Besides logistical skills, this assignment also involves visualizing shot data of specific NBA players from the Golden State Warriors along with other summaries and visualizations. The final piece of this assignment is a written report to communicate with words rather than a bunch of code.
+
