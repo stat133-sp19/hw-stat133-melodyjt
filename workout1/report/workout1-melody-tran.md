@@ -8,7 +8,7 @@ Melody Tran
 
 In the 2016-2017 Golden State Warriors basketball season, the Warriors won their fifth National Basketball Association (NBA) Championship. Winning 16-1, this is the best postseason record! But who are the Golden State Warriors? They are Bay Area's beloved professional basketball team based in Oakland, California! With Stephen Curry, Kevin Durant, Klay Thompson, and Draymond Green who are known as the "Fantastic Four" on the team along with Andre Iguodala, there is no doubt that they were the ones who brought the team to success. By analyzing their shot success rates throughout the season, it is clear as to why they are the five key players on the Golden State Warrior team.
 
-<img src="../../../../Downloads/fivegsw.jpg" width="80%" style="display: block; margin: auto;" />
+<img src="../../../../Downloads/topfive.jpg" width="80%" style="display: block; margin: auto;" />
 
 #### **Motivation**
 
