@@ -15,7 +15,11 @@ court_image <- rasterGrob(
   height = unit(1, "npc")
 )
 
-shots <- read.csv("../data/shots-data.csv", stringsAsFactors = FALSE)
+datatypes <- c("team_name" = "character", "game_date" = "character", "season" = "integer", "period" = "integer",
+               "minutes_remaining" = "integer", "seconds_remaining" = "integer", "shot_made_flag" = "character",
+               "action_type" = "factor", "shot_type" = "factor", "shot_distance" = "integer", "opponent" = "character",
+               "x" = "integer", "y" = "integer", "name" = "character", "minute" = "integer")
+shots <- read.csv("../data/shots-data.csv", stringsAsFactors = FALSE, colClasses = datatypes)
 
 andre <- shots[shots$name == "Andre Iguodala",]
 draymond <- shots[shots$name == "Draymond Green",]
@@ -51,7 +55,7 @@ klay_shot_chart <- ggplot(data = klay) +
   ggtitle('Shot Chart: Klay Thompson (2016 season)') +
   theme_minimal()
 
-stephen_shot_chart <- ggplot(data = andre) +
+stephen_shot_chart <- ggplot(data = stepehn) +
   annotation_custom(court_image, -250, 250, -50, 420) +
   geom_point(aes(x = x, y = y, color = shot_made_flag)) +
   ylim(-50, 420) +
@@ -78,15 +82,18 @@ pdf('../images/stephen-curry-shot-chart.pdf', width = 6.5, height = 5)
 stephen_shot_chart
 dev.off()
 
-facet_shot_chart <- ggplot(data = shots) +
+gsw_shot_charts <- ggplot(data = shots) +
   annotation_custom(court_image, -250, 250, -50, 420) +
   geom_point(aes(x = x, y = y, color = shot_made_flag)) +
   ylim(-50, 420) +
   ggtitle('Shot Charts: GSW (2016 season)') +
   theme_minimal()+
   facet_wrap(~ name)
-facet_shot_chart
 
-png('../images/gsw-shot-charts.png', width=8,height=7, units="in", res = 72)
-facet_shot_chart
+pdf('../images/gsw-shot-carts.pdf', width = 8, height = 7)
+gsw_shot_charts
+dev.off()
+
+png('../images/gsw-shot-charts.png', width = 8, height = 7, units = "in", res = 72)
+gsw_shot_charts
 dev.off()
