@@ -1,0 +1,68 @@
+---
+title: "Introduction to Binomial"
+author: "Melody Tran"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(binomial)
+```
+## Binomial Distribution
+
+The package `"binomial"` implements the functions required to calculate the probabilities of a Binomial random variable. It also calculates the expected value, variance, mode, skewness, and kurtosis of a binomial distribution.
+
+
+### Important Things to Note
+
+Since the Binomial Distribution is the probability model used to calculate probabilities about the number of successes in a fixed number of random trials under an assumed constant probability of success on each trial, here are three things to be aware of: 
+
+1. For `probability` to be valid, it needs to be a number between 0 and 1. 
+
+2. For `trials` to be valid, it needs to be a non-negative integer.
+
+3. For `success` to be valid, it needs to be either an integer or a vector of integers greater than or equal to 0 and less than or equal to the number of trials.
+
+However, if you make a mistake, an error message will tell you which of the three you incorrectly inputted. 
+
+## Binomial Functions
+
+### bin_choose()
+
+The `bin_choose function` takes in the input of trials and success to calculate the number of combinations in which `k` successes can occur in `n` trials.
+
+
+### bin_probability()
+
+The `bin_probability function` takes in the input of `success`, `trials`, and `probability` to calculate the probability of getting `k` successes in `n` trials. 
+
+
+### bin_distribution()
+
+The `bin_distribution function` takes the input of `trials` and `probability`, but unlike the previous two functions, it uses these two inputs to create a data frame with the columns success and probability. It calculates the probability of each value of success in n trials. For example, if there are 5 trials, there are probabilities for having 0 successes, 1 success, 2 success, etc.
+
+If you use the `plot` method for `bin_distribution()`, a barplot will be created with success on the x-axis and probability on the y-axis. Since this is a binomial distribution, it should have the shape of a bell curve. In other words, the bars should be symmetrical. 
+
+
+### bin_cumulative()
+
+The `bin_cumulative function` takes in the same two inputs as bin_distribution to again create a `data frame` with success and probability columns. Unlike `bin_distribution()`, there is an added column called `cumulative` which calculates the cumulative probability. So at the very last trial, the cumulative probability should add up to 1. 
+
+If you use the `plot` method for `bin_cumulatibe()`, a line graph will be created with success on the x-axis and probability on the y-axis. There are also open circles for each point. The line represents the cumulative probability and each point is the value of the cumulative probability calculated.
+
+### bin_variable()
+
+The `bin_variable function` takes in the variables `trials` and `probability` and returns a named list (trials and prob are the names). Also, four lines of text will be printed out with two lines being the values for `trials` and `probability`.
+
+If you use the `summary` method for `bin_variable()`, a named list will be created that not only includes the `trials` and `probability`, but also the five different measures of a binomial distribution (`expected value`, `variance`, `mode`, `skewness`, and `kurtosis`). It will also print out something similar to just printing out `bin_variable()` except now there are five more lines for the five different measures.
+
