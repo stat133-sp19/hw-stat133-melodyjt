@@ -20,22 +20,22 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-`"binomial"` is an R package that provides functions to make different calculations on a Binomial random variable.
-* `bin_choose()` calculates the number of combinations in which `k` successes can occur in `n` trials
-# `bin_probability()` calculates the probability of getting `k` successes in `n` trials
-* `bin_distribution()` creates a data frame after calculating the probability of each value of success in n trials with the columns success and probability
-* `plot()` method for `bin_distribution()` to make a barplot of the probability of each value of success in n trials
-* `bin_cumulative()` create a data frame after calculating cumulative probability of each value of success in n trials with the columns success, probability, and cumulative
-* `plot()` method for `bin_cumulative()` to plot the cumulative probability in a line graph
-* `bin_variable()` creates a named list for trials and probability
-* `print()` method for `bin_variable()` to print out the number of trials and probability
-* `summary()` method for `bin_variable()` to calculate the five different measures of a binomial distribution and put it in a named list
-* `print.summary()` method for `bin_variable()` to print out the number of trials and probability along with the five different measures
+`"binomial"` is an R package that provides functions to make different calculations on a Binomial random variable.    
+* `bin_choose()` calculates the number of combinations in which `k` successes can occur in `n` trials    
+* `bin_probability()` calculates the probability of getting `k` successes in `n` trials    
+* `bin_distribution()` creates a data frame after calculating the probability of each value of success in n trials with the columns success and probability    
+* `plot()` method for `bin_distribution()` to make a barplot of the probability of each value of success in n trials    
+* `bin_cumulative()` create a data frame after calculating cumulative probability of each value of success in n trials with the columns success, probability, and cumulative    
+* `plot()` method for `bin_cumulative()` to plot the cumulative probability in a line graph    
+* `bin_variable()` creates a named list for trials and probability    
+* `print()` method for `bin_variable()` to print out the number of trials and probability    
+* `summary()` method for `bin_variable()` to calculate the five different measures of a binomial distribution and put it in a named list    
+* `print.summary()` method for `bin_variable()` to print out the number of trials and probability along with the five different measures    
 
 
 ## Motivation
 
-This assignment involves learning how to create an R package using devtools and testthat packages.
+This assignment involves learning how to create an R package using devtools and testthat packages. 
 
 
 ## Installation
