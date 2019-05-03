@@ -1,13 +1,4 @@
 
-Workout 3
----------
-
--   Name: Melody Tran
--   Github username: melodyjt
--   Email: <melodyjt@berkeley.edu>
--   Lab section: 107
--   GSI: Dodo Qian
-
 Overview
 --------
 
