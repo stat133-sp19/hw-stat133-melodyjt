@@ -52,6 +52,7 @@ bin_probability <- function(success, trials, prob) {
 #' @param prob the probability of success (integer)
 #' @return a dataframe
 #' @export
+#' @importFrom graphics barplot plot
 #' @examples
 #' bin_distribution(trials = 5, prob = 0.5)
 
@@ -65,7 +66,7 @@ bin_distribution <- function(trials, prob) {
 }
 
 #' @export
-plot.bindis <- function(dis) {
+plot.bindis <- function(dis, ...) {
   barplot(dis$probability,
           names.arg = dis$success,
           width = 1,
@@ -79,6 +80,7 @@ plot.bindis <- function(dis) {
 #' @param prob the probability of success (integer)
 #' @return a dataframe
 #' @export
+#' @importFrom graphics barplot plot
 #' @examples
 #' bin_cumulative(trials = 5, prob = 0.5)
 
@@ -93,8 +95,7 @@ bin_cumulative <- function(trials, prob) {
 }
 
 #' @export
-
-plot.bincum <- function(cum) {
+plot.bincum <- function(cum, ...) {
   plot(x = cum$success,
        y = cum$cumulative,
        xlab = "successes",
@@ -125,7 +126,7 @@ bin_variable <- function(trials, prob) {
 }
 
 #' @export
-print.binvar <- function(binvar) {
+print.binvar <- function(binvar, ...) {
   cat('"Binomial variable"\n\n')
   cat("Parameters\n")
   cat(paste0("- number of trials: ", binvar$trials), '\n')
@@ -133,7 +134,7 @@ print.binvar <- function(binvar) {
 }
 
 #' @export
-summary.binvar <- function(binvar) {
+summary.binvar <- function(binvar, ...) {
   summaryelements <- list(trials = binvar$trials,
                           prob = binvar$prob,
                           mean = aux_mean(binvar$trials,
@@ -151,7 +152,8 @@ summary.binvar <- function(binvar) {
   return(summaryelements)
 }
 
-print.summary.binvar <- function(binvarsum) {
+#' @export
+print.summary.binvar <- function(binvarsum, ...) {
   cat('"Summary Binomial"\n\n')
   cat("Parameters\n")
   cat(paste0("- number of trials: ", binvarsum$trials), '\n')
